@@ -1,4 +1,3 @@
-Hey
 <% @products.each do |product| %>
     <p><%= product.name %> | <%= number_to_currency product.price %>
     <%= form_for @order_item do |f| %>
@@ -7,3 +6,8 @@ Hey
       <%= f.submit "Add to cart" %>
     <% end %></p>
   <% end %>
+
+  <h1>Api</h1>
+  <% @response["results"]["Book"].each do |book| %>
+  <%=book["title"]%>
+  <%=book["author"]%>
